@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="#efebe3" stroke="#efebe3">
+  <!-- Nachbau des Logos vom Baustellenbanner: drei Dächer, HB-Monogramm, Grundlinie -->
+  <rect width="400" height="240" fill="#2f5d78" stroke="none"/>
+  <g fill="none" stroke-width="3" stroke-linejoin="miter">
+    <polyline points="12,150 70,46 124,150"/>
+    <polyline points="134,150 200,10 266,150"/>
+    <polyline points="276,150 330,46 388,150"/>
+  </g>
+  <g stroke="none">
+    <polygon points="78,46 136,62 122,136"/>
+    <polygon points="140,60 186,24 132,136"/>
+    <polygon points="322,46 264,62 278,136"/>
+    <polygon points="260,60 214,24 268,136"/>
+    <rect x="183" y="70" width="7" height="54"/>
+    <rect x="190" y="94" width="8" height="6"/>
+    <rect x="198" y="70" width="7" height="54"/>
+  </g>
+  <path d="M201 73.5H208a11.25 11.25 0 0 1 0 22.5H201M201 96H209a12.25 12.25 0 0 1 0 24.5H201" fill="none" stroke-width="7"/>
+  <line x1="10" y1="165" x2="390" y2="165" stroke-width="2"/>
+  <text x="200" y="212" text-anchor="middle" stroke="none" font-family="Archivo, Arial, sans-serif" font-size="40" font-weight="500">Holzbau Beuttler</text>
+</svg>

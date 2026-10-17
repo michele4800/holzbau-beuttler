@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holzbau Beuttler – Zimmerei & Holzbau in Döffingen</title>
+<meta name="description" content="Holzbau Timm Beuttler aus 71120 Döffingen: Holzbau, Dachsanierung, Fenster & Dachfenster, Türen, Fassade, Innenausbau, Pergola und Gerüstverleih.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --petrol:#2f5d78; --petrol-dark:#1c3a4d; --petrol-ink:#13293a;
+    --cream:#efebe3; --paper:#f7f5f0; --line:#ddd6c9;
+    --wood:#b9824e; --text:#1b2a35; --muted:#5a6873;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Archivo,Arial,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;font-size:17px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.1;margin:0;font-weight:800;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,4vw,2.9rem)}
+  .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--wood);margin:0 0 14px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-weight:600;text-decoration:none;border:2px solid currentColor;transition:background .2s,color .2s}
+  .btn-solid{background:var(--cream);color:var(--petrol-ink);border-color:var(--cream)}
+  .btn-solid:hover{background:#fff;border-color:#fff}
+  .btn-ghost{color:var(--cream)}
+  .btn-ghost:hover{background:var(--cream);color:var(--petrol-ink)}
+  :focus-visible{outline:3px solid var(--wood);outline-offset:3px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:var(--petrol);color:var(--cream);border-bottom:1px solid rgba(239,235,227,.15)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand svg{width:86px;height:auto;color:var(--cream)}
+  .brand span{font-weight:500;font-size:1.15rem;letter-spacing:.01em}
+  nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;font-weight:500;opacity:.85}
+  nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+  .call{font-weight:600;text-decoration:none;border:1.5px solid rgba(239,235,227,.5);padding:8px 14px;white-space:nowrap}
+  .call:hover{background:var(--cream);color:var(--petrol-ink)}
+  @media (max-width:860px){nav{display:none}}
+  @media (max-width:420px){.brand span{display:none}}
+
+  /* Hero */
+  .hero{position:relative;color:var(--cream);background:var(--petrol-ink);min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,41,58,.92) 0%,rgba(19,41,58,.55) 55%,rgba(19,41,58,.15) 100%)}
+  .hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:88px;width:100%}
+  .hero h1{font-size:clamp(2.6rem,6.5vw,5rem);max-width:12ch}
+  .hero p{max-width:46ch;font-size:1.15rem;margin:22px 0 34px;opacity:.9}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* Banner-Leiste, wie das Baustellenbanner */
+  .strip{background:var(--petrol);color:var(--cream)}
+  .strip ul{list-style:none;margin:0;padding:34px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 28px}
+  .strip li{display:flex;align-items:center;gap:10px;font-weight:500;font-size:1.05rem}
+  .strip li::before{content:"";width:10px;height:10px;flex:none;border:2px solid var(--cream);transform:rotate(45deg)}
+  @media (max-width:860px){.strip ul{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:96px 0}
+  .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+  .head p{max-width:46ch;color:var(--muted);margin:0}
+
+  /* Leistungen */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+  .card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .card .ph{aspect-ratio:4/3;background:var(--petrol);display:grid;place-items:center;color:var(--cream)}
+  .card .ph svg{width:46%}
+  .card div.txt{padding:20px 20px 24px}
+  .card h3{font-size:1.2rem;margin-bottom:8px}
+  .card p{margin:0;color:var(--muted);font-size:.96rem}
+  @media (max-width:1000px){.services{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.services{grid-template-columns:1fr}}
+
+  /* Projekte */
+  .projects{background:var(--petrol-ink);color:var(--cream)}
+  .projects .head p{color:rgba(239,235,227,.7)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:10px}
+  .grid figure{margin:0;position:relative;overflow:hidden;background:#000}
+  .grid figure.big{grid-column:span 2;grid-row:span 2}
+  .grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s;opacity:.92}
+  .grid figure:hover img{transform:scale(1.04);opacity:1}
+  .grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:.92rem;font-weight:500;background:linear-gradient(transparent,rgba(19,41,58,.9))}
+  @media (max-width:860px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}}
+  .insta{margin-top:34px}
+
+  /* Über uns */
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+  .about img{aspect-ratio:1;object-fit:cover;width:100%}
+  .about p{color:var(--muted)}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:32px}
+  .facts div{padding:20px 0}
+  .facts b{display:block;font-size:1.6rem;color:var(--petrol)}
+  .facts span{font-size:.88rem;color:var(--muted)}
+  @media (max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+
+  /* Kontakt */
+  .contact{background:var(--petrol);color:var(--cream);text-align:center}
+  .contact .logo{width:min(360px,80%);margin:0 auto 40px;color:var(--cream)}
+  .contact h2{margin-bottom:16px}
+  .contact p.lead{opacity:.85;max-width:52ch;margin:0 auto 40px}
+  .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(239,235,227,.2);border:1px solid rgba(239,235,227,.2);text-align:left}
+  .channels a,.channels div{background:var(--petrol);padding:26px 24px;text-decoration:none;display:block}
+  .channels a:hover{background:var(--petrol-dark)}
+  .channels small{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;opacity:.7;margin-bottom:6px}
+  .channels strong{font-size:1.15rem;font-weight:600;word-break:break-word}
+  @media (max-width:760px){.channels{grid-template-columns:1fr}}
+
+  footer{background:var(--petrol-ink);color:rgba(239,235,227,.7);font-size:.9rem;padding:28px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--cream)}
+
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- Logo-Zeichen (Nachbau vom Baustellenbanner), wird per <use> wiederverwendet -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 400 170">
+    <g fill="none" stroke="currentColor" stroke-width="3">
+      <polyline points="12,150 70,46 124,150"/>
+      <polyline points="134,150 200,10 266,150"/>
+      <polyline points="276,150 330,46 388,150"/>
+      <line x1="10" y1="165" x2="390" y2="165" stroke-width="2"/>
+    </g>
+    <g fill="currentColor">
+      <polygon points="78,46 136,62 122,136"/>
+      <polygon points="140,60 186,24 132,136"/>
+      <polygon points="322,46 264,62 278,136"/>
+      <polygon points="260,60 214,24 268,136"/>
+      <rect x="183" y="70" width="7" height="54"/>
+      <rect x="190" y="94" width="8" height="6"/>
+      <rect x="198" y="70" width="7" height="54"/>
+    </g>
+    <path d="M201 73.5H208a11.25 11.25 0 0 1 0 22.5H201M201 96H209a12.25 12.25 0 0 1 0 24.5H201" fill="none" stroke="currentColor" stroke-width="7"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Holzbau Beuttler – Startseite">
+      <svg viewBox="0 0 400 170" aria-hidden="true"><use href="#mark"/></svg>
+      <span>Holzbau Beuttler</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="call" href="tel:+4915785824553">0157 85824553</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <img src="img/maschinenhalle.jpg" alt="" fetchpriority="high">
+    <div class="wrap">
+      <p class="eyebrow">Zimmerei · Holzbau · Döffingen</p>
+      <h1>Holzbau, der Bestand hat.</h1>
+      <p>Vom Abbund für das Einfamilienhaus bis zum neuen Dachfenster: Holzbau Timm Beuttler plant, fertigt und montiert – sauber, termingerecht und aus einer Hand.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:+4915785824553">Jetzt anrufen</a>
+        <a class="btn btn-ghost" href="#projekte">Projekte ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <ul class="wrap" aria-label="Leistungen im Überblick">
+      <li>Holzbau</li><li>Türen</li><li>Dachsanierung</li><li>Fenster / Dachfenster</li>
+      <li>Fassade</li><li>Innenausbau</li><li>Pergola</li><li>Gerüstverleih</li>
+    </ul>
+  </div>
+
+  <section id="leistungen">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Leistungen</p><h2>Was wir für Sie bauen</h2></div>
+        <p>Ob Neubau, Sanierung oder Austausch – wir übernehmen Planung, Material und Montage.</p>
+      </div>
+      <div class="services">
+        <article class="card"><img src="img/abbund.jpg" alt="Abgebundene Holzbalken für ein Einfamilienhaus" loading="lazy"><div class="txt"><h3>Holzbau &amp; Abbund</h3><p>Dachstühle, Holzrahmen und Hallen – vorbereitet in der Werkstatt, schnell aufgeschlagen.</p></div></article>
+        <article class="card"><img src="img/dachfenster-velux.jpg" alt="Neu eingebautes Dachfenster mit Fensterfutter" loading="lazy"><div class="txt"><h3>Fenster &amp; Dachfenster</h3><p>Austausch und Neueinbau inklusive sauberem Fensterfutter, z. B. Velux und Roto.</p></div></article>
+        <article class="card"><img src="img/terrassendach.jpg" alt="Terrassenüberdachung aus Holz" loading="lazy"><div class="txt"><h3>Pergola &amp; Terrassendach</h3><p>Überdachungen und Pergolen aus Konstruktionsvollholz – passend zu Haus und Garten.</p></div></article>
+        <article class="card"><img src="img/garage-trespa.jpg" alt="Garage mit neuer Fassadenverkleidung" loading="lazy"><div class="txt"><h3>Fassade</h3><p>Verkleidungen mit Holz oder Fassadenplatten – langlebig und gut aussehend.</p></div></article>
+        <article class="card"><img src="img/garagentor.jpg" alt="Neues Holz-Garagentor" loading="lazy"><div class="txt"><h3>Türen &amp; Tore</h3><p>Haustüren, Stalltüren und Garagentore – geliefert und fachgerecht eingebaut.</p></div></article>
+        <article class="card"><img src="img/boden.jpg" alt="Neu verlegter Boden in Birken-Optik" loading="lazy"><div class="txt"><h3>Innenausbau</h3><p>Böden, Verkleidungen und Ausbau im Innenbereich – bis ins Detail sauber.</p></div></article>
+        <article class="card"><img src="img/dachfenster-roto.jpg" alt="Dachfenster nach der Sanierung" loading="lazy"><div class="txt"><h3>Dachsanierung</h3><p>Aus alt mach neu: Wir sanieren Dach und Dachfenster und machen sie wieder dicht.</p></div></article>
+        <article class="card"><div class="ph"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M10 6v54M54 6v54M10 18h44M10 34h44M10 50h44M10 18l44 16M10 34l44 16"/></svg></div><div class="txt"><h3>Gerüstverleih</h3><p>Sie bauen selbst? Wir verleihen Gerüste – auf Wunsch mit Auf- und Abbau.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekte" class="projects">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Referenzen</p><h2>Aus unseren Projekten</h2></div>
+        <p>Eine Auswahl unserer Arbeiten aus der Region – mehr gibt es auf Instagram.</p>
+      </div>
+      <div class="grid">
+        <figure class="big"><img src="img/maschinenhalle.jpg" alt="Landwirtschaftliche Maschinenhalle in Holzbauweise" loading="lazy"><figcaption>Landwirtschaftliche Maschinenhalle</figcaption></figure>
+        <figure><img src="img/gartenhaus.jpg" alt="Gartenhaus aus Holz" loading="lazy"><figcaption>Gartenhaus aufgebaut</figcaption></figure>
+        <figure><img src="img/abbund.jpg" alt="Abbund auf dem Werkhof" loading="lazy"><figcaption>Abbund für ein Einfamilienhaus</figcaption></figure>
+        <figure><img src="img/terrassendach.jpg" alt="Terrassenüberdachung" loading="lazy"><figcaption>Terrassenüberdachung</figcaption></figure>
+        <figure><img src="img/garage-trespa.jpg" alt="Garage mit Fassadenverkleidung" loading="lazy"><figcaption>Garage neu verkleidet</figcaption></figure>
+        <figure><img src="img/dachfenster-vorher-nachher.jpg" alt="Dachfenster mit Holz-Fensterfutter" loading="lazy"><figcaption>Dachfenster – aus alt mach neu</figcaption></figure>
+        <figure><img src="img/stalltuer.jpg" alt="Neue Stalltür aus Nut-und-Feder-Brettern" loading="lazy"><figcaption>Neue Stalltür</figcaption></figure>
+        <figure><img src="img/gelaender.jpg" alt="Holzgeländer am Hang" loading="lazy"><figcaption>Geländer aus Holz</figcaption></figure>
+        <figure><img src="img/boden.jpg" alt="Boden in Birken-Optik" loading="lazy"><figcaption>Boden in Birken-Optik</figcaption></figure>
+      </div>
+      <a class="btn btn-ghost insta" href="https://www.instagram.com/holzbaubeuttler/" target="_blank" rel="noopener">Mehr auf Instagram @holzbaubeuttler</a>
+    </div>
+  </section>
+
+  <section id="ueber-uns">
+    <div class="wrap about">
+      <img src="img/gartenhaus.jpg" alt="Von Holzbau Beuttler aufgebautes Gartenhaus" loading="lazy">
+      <div>
+        <p class="eyebrow">Über uns</p>
+        <h2>Ihr Zimmermann aus Döffingen</h2>
+        <p>Hinter Holzbau Beuttler steht Timm Beuttler. Wir sind ein Handwerksbetrieb aus 71120 Döffingen und arbeiten für Privatkunden, Landwirte und Gewerbe in der Region.</p>
+        <p>Bei uns haben Sie einen festen Ansprechpartner – von der ersten Besichtigung bis zur fertigen Montage. Wir arbeiten mit bewährten Herstellern und Materialien und hinterlassen die Baustelle so, wie wir sie vorgefunden haben: aufgeräumt.</p>
+        <div class="facts">
+          <div><b>1</b><span>Ansprechpartner</span></div>
+          <div><b>8</b><span>Leistungsbereiche</span></div>
+          <div><b>71120</b><span>Döffingen &amp; Umgebung</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="wrap">
+      <svg class="logo" viewBox="0 0 400 170" role="img" aria-label="Logo Holzbau Beuttler"><use href="#mark"/></svg>
+      <h2>Projekt im Kopf?</h2>
+      <p class="lead">Rufen Sie an oder schreiben Sie uns – wir kommen vorbei, schauen uns alles an und machen Ihnen ein Angebot.</p>
+      <div class="channels">
+        <a href="tel:+4915785824553"><small>Telefon</small><strong>0157 85824553</strong></a>
+        <a href="mailto:Beuttler.holzbau@gmail.com"><small>E-Mail</small><strong>Beuttler.holzbau@gmail.com</strong></a>
+        <div><small>Standort</small><strong>71120 Döffingen</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Holzbau Timm Beuttler</span>
+    <span><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a> · <a href="https://www.instagram.com/holzbaubeuttler/" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
